@@ -1,12 +1,12 @@
 package easing;
 
 class Back {
-    // Modeled after the overshooting cubic y = x^3-x*Math.sin(x*pi)
+    // Modeled after the overshooting cubic y = x^3-x*sin(x*pi)
     public static function easeIn(p:Float):Float {
         return p * p * p - p * Math.sin(p * Math.PI);
     }
 
-    // Modeled after overshooting cubic y = 1-((1-x)^3-(1-x)*Math.sin((1-x)*pi))
+    // Modeled after overshooting cubic y = 1-((1-x)^3-(1-x)*sin((1-x)*pi))
     public static function easeOut(p:Float):Float {
         var f = (1 - p);
         return 1 - (f * f * f - f * Math.sin(f * Math.PI));
